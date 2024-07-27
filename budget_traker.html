@@ -1,0 +1,100 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8" /> 
+	<meta name="viewport"
+		content="width=device-width, 
+				initial-scale=1.0" /> 
+	<link rel="stylesheet"
+		href="style2.css" /> 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title>Expense Tracker</title> 
+</head> 
+
+<body> 
+	<div> 
+		<div class="logo"><a href="index.html">V <i class="fa-solid fa-indian-rupee-sign"></i> IDDHI.in </a></div> 
+		<h3>Expense Tracking Tool</h3> 
+	</div> 
+	<div class="summary"> 
+		<div> 
+			<h1 style="background-color: #e64323;color: white;"> Balance: 
+				<span id="updatedBal"> 
+					7000 
+				</span> 
+			</h1> 
+		</div> 
+		<br /> 
+		<div class="total"> 
+			<div> 
+				Total Income: 
+				<div> 
+					<h2 style="color: rgb(202, 56, 43);"
+						id="updatedInc"> 
+						25000 
+					</h2> 
+				</div> 
+			</div> 
+			<hr class="verticle" /> 
+			<div> 
+				Total Expenses: 
+				<div> 
+					<h2 style="color: rgb(182, 145, 145);"
+						id="updatedExp"> 
+						18000 
+					</h2> 
+				</div> 
+			</div> 
+		</div> 
+	</div> 
+	<div class="root"> 
+		<div id="h"> 
+			<h2 >Add New Entry</h2> 
+
+			<div class="inputs"> 
+				<div class="inputitem"> 
+					<p style="width: 9rem"> 
+						Entry type: 
+					</p> 
+					<select id='itemType'> 
+						<option value="0">Expense</option> 
+						<option value="1">Income</option> 
+					</select> 
+				</div> 
+				<div class="inputitem"> 
+					<p style="width: 9rem">Name:</p> 
+					<input id="name"
+						type="text"
+						value=""
+						placeholder="Name" /> 
+				</div> 
+				<div class="inputitem"> 
+					<p style="width: 9rem">Amount:</p> 
+					<input value="0"
+						id="amount"
+						name="mod"
+						type="number"
+						placeholder="Amount" /> 
+				</div> 
+				<button onclick="addItem()"> 
+					Add Expense 
+				</button> 
+		<hr class="vertical" /> 
+		<div id="items"> 
+			<h2>Expenses</h2> 
+			<table id="table"> 
+				<tr class="titles"> 
+					<th>S.no.</th> 
+					<th>Name</th> 
+					<th>Amount</th> 
+					<th>Type</th> 
+					<th>Delete</th> 
+				</tr> 
+			</table> 
+		</div> 
+	</div> 
+	<script src="javascript.js"></script> 
+</body> 
+
+</html>
